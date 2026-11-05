@@ -181,6 +181,8 @@
         </div>
     </section>
 
+    <section class="card-article" id="elegir-fotos"><h2 class="section-title">Nuestras fotografías</h2><p style="text-align:center">277 fotos de nuestra sesión. Elige tus favoritas para impresión, ampliación e invitación.</p><p style="text-align:center;margin:24px"><a href="selector.html" style="display:inline-block;padding:16px 24px;border:1px solid currentColor;border-radius:30px;color:var(--rose-dark)">Abrir selector de fotos →</a></p></section>
+
     <!-- ══ Videos (YouTube) ══ -->
     <!-- Para publicar: pega el enlace de YouTube en data-yt de cada video. Los que queden vacíos no se muestran. -->
     <section id="videos" class="card-article" style="display:none">
@@ -194,8 +196,10 @@
             <div class="yt-item" data-yt="https://youtu.be/DEapp-Eron8" data-titulo="Gracias, familia"></div>
         </div>
     </section>
+<section id="shorts" class="card-article"><h2 class="section-title">Nuestros momentos en Shorts</h2><div class="section-rule"></div><div class="yt-grid"><div class="yt-item yt-short" data-yt="https://www.youtube.com/shorts/RlBdCXUyqgI" data-titulo="Así le dio el anillo"></div><div class="yt-item yt-short" data-yt="https://www.youtube.com/shorts/IhvUTmp6eNs" data-titulo="De un match al altar"></div><div class="yt-item yt-short" data-yt="https://www.youtube.com/shorts/ortihvpPp00" data-titulo="Todas sus facetas son serias"></div></div></section>
     <style>
     .yt-grid{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .yt-short .yt-frame{aspect-ratio:9/16;max-height:540px}.yt-short .yt-frame img{object-fit:contain;background:#171717}.yt-direct{display:block;text-align:center;margin:12px auto;color:var(--rose-dark)}
     .yt-item h3{font:400 1.35rem Italiana,serif;color:var(--rose-dark);text-align:center;margin:10px 0 0}
     .yt-frame{position:relative;aspect-ratio:16/9;background:var(--blush-soft);border:1px solid var(--line);cursor:pointer;overflow:hidden}
     .yt-frame img{width:100%;height:100%;object-fit:cover;display:block}
@@ -208,7 +212,7 @@
       var any=false;
       document.querySelectorAll('.yt-item').forEach(function(el){
         var id=ytId(el.dataset.yt); if(!id){el.remove();return;} any=true;
-        el.innerHTML='<div class="yt-frame" role="button" tabindex="0" aria-label="Reproducir '+el.dataset.titulo+'"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/'+id+'/hqdefault.jpg"><span class="yt-play"><i class="fas fa-circle-play"></i></span></div><h3>'+el.dataset.titulo+'</h3>';
+        el.innerHTML='<div class="yt-frame" role="button" tabindex="0" aria-label="Reproducir '+el.dataset.titulo+'"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/'+id+'/hqdefault.jpg"><span class="yt-play"><i class="fas fa-circle-play"></i></span></div><h3>'+el.dataset.titulo+'</h3><a class="yt-direct" target="_blank" rel="noopener noreferrer" href="'+el.dataset.yt+'">Ver en YouTube ↗</a>';
         var f=el.querySelector('.yt-frame');
         function play(){var m=document.getElementById('invitationMusic'); if(m){m.pause();}
           f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="'+el.dataset.titulo+'"></iframe>';}
