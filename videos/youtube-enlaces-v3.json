@@ -1,7 +1,7 @@
 {
   "videos": [
     {"numero": "18", "titulo": "Cortometraje de boda", "url": "https://youtu.be/U51kTawyU_4", "visibilidad": "no listado"},
-    {"numero": "19", "titulo": "Película de boda", "url": "https://youtu.be/u5-MneLxiHY", "visibilidad": "no listado"}
-  ],
-  "pendiente": {"numero": "20", "titulo": "Versión íntegra", "estado": "YouTube indicó que se eliminó durante la subida; enlace no publicado en la invitación"}
+    {"numero": "19", "titulo": "Película de boda", "url": "https://youtu.be/u5-MneLxiHY", "visibilidad": "no listado"},
+    {"numero": "20", "titulo": "Versión íntegra", "url": "https://youtu.be/VR4zJ_sIEds", "visibilidad": "no listado", "estado": "subida completada; procesando en YouTube"}
+  ]
 }
